@@ -1,7 +1,5 @@
 import { AutoSaveService } from './shared/auto-save.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -13,6 +11,8 @@ import { environment } from 'src/environments/environment';
 import { PlanningModule } from './planning/planning.module';
 import { HistoryState } from './planning/histories/history.state';
 import { SharedModule } from './shared/shared.module';
+
+import { LOCALE_ID, NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     PlanningModule
   ],
-  providers: [AutoSaveService],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-br' },
+   AutoSaveService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

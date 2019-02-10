@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="planningNewHistoryButtonLabel" datatype="html">
+        <source>
+  New history
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/planning/histories/histories.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">New history button label</note>
+        <note priority="1" from="meaning">new history</note>
+      </trans-unit>
+      <trans-unit id="planningHistoryTitleHintLabel" datatype="html">
+        <source>Title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/planning/shared/history-card/history-card.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">History title field label</note>
+        <note priority="1" from="meaning">history title hint</note>
+      </trans-unit>
+      <trans-unit id="planningHistoryTitlePlaceHolderLabel" datatype="html">
+        <source>History Title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/planning/shared/history-card/history-card.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">History title placeholder field label</note>
+        <note priority="1" from="meaning">history detail placeholder</note>
+      </trans-unit>
+      <trans-unit id="planningHistoryDetailHintLabel" datatype="html">
+        <source>Detail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/planning/shared/history-card/history-card.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">History detail field label</note>
+        <note priority="1" from="meaning">history detail hint</note>
+      </trans-unit>
+      <trans-unit id="planningHistoryDetailPlaceHolderLabel" datatype="html">
+        <source>History Detail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/planning/shared/history-card/history-card.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">History detail placeholder field label</note>
+        <note priority="1" from="meaning">history detail placeholder</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

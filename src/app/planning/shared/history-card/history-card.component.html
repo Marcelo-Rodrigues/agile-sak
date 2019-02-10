@@ -11,8 +11,9 @@
   </mat-card-title>
   <mat-card-content>
     <mat-form-field appearance="outline">
-        <mat-label>Title</mat-label>
+        <mat-label i18n="history title hint|History title field label@@planningHistoryTitleHintLabel">Title</mat-label>
         <input
+          i18n-placeholder="history detail placeholder|History title placeholder field label@@planningHistoryTitlePlaceHolderLabel"
           matInput placeholder="History Title"
           #title
           [value]="historyModel.title"
@@ -21,10 +22,11 @@
         />
     </mat-form-field>
     <mat-form-field appearance="outline">
-        <mat-label>Detail</mat-label>
+        <mat-label i18n="history detail hint|History detail field label@@planningHistoryDetailHintLabel">Detail</mat-label>
       <textarea matInput
         rows="4"
         matInput
+        i18n-placeholder="history detail placeholder|History detail placeholder field label@@planningHistoryDetailPlaceHolderLabel"
         placeholder="History Detail"
         #detail
         [value]="historyModel.detail"

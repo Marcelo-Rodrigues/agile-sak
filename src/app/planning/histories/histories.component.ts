@@ -5,7 +5,6 @@ import { Store, Select } from '@ngxs/store';
 import { CreateHistory, ReorderHistory, LoadHistory } from './history.actions';
 import { HistoryState, HistoryModel } from './history.state';
 import { Observable } from 'rxjs';
-import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-histories',
