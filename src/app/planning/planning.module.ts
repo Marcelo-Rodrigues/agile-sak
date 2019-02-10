@@ -7,6 +7,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
 import { HistoryCardComponent } from './shared/history-card/history-card.component';
 import { SharedModule } from '../shared/shared.module';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [HistoriesComponent, HistoryCardComponent],
@@ -16,7 +18,9 @@ import { SharedModule } from '../shared/shared.module';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    SharedModule
+    SharedModule,
+    MatIconModule,
+    MatToolbarModule
   ]
 })
 export class PlanningModule { }

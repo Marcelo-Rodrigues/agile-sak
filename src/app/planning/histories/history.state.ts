@@ -4,7 +4,8 @@ import {
   CreateHistory,
   UpdateHistory,
   ReorderHistory,
-  LoadHistory
+  LoadHistory,
+  DeleteHistory
 } from './history.actions';
 
 export interface HistoryModel {
@@ -50,5 +51,15 @@ export class HistoryState {
         return { title: item.title, detail: item.detail } as HistoryModel;
       })
     );
+  }
+
+  @Action(DeleteHistory)
+  public delete(ctx: StateContext<HistoryModel[]>, action: DeleteHistory) {
+    const newHistories = ctx.getState().slice(0);
+    const historyIndex = newHistories.indexOf(action.historyToDelete);
+    if (historyIndex > -1) {
+      newHistories.splice(historyIndex, 1);
+      ctx.setState(newHistories);
+    }
   }
 }

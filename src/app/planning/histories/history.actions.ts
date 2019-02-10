@@ -21,3 +21,8 @@ export class LoadHistory {
 
     constructor(public histories: HistoryModel[]) { }
 }
+export class DeleteHistory {
+  static readonly type = '[Planning] Delete History';
+
+  constructor(public historyToDelete: HistoryModel) { }
+}

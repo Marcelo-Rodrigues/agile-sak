@@ -1,23 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { HistoryModel } from '../../histories/history.state';
-import { Store } from '@ngxs/store';
-import { UpdateHistory } from '../../histories/history.actions';
+import { DeleteHistory } from './../../histories/history.actions';
+import { Component, OnInit, Input } from "@angular/core";
+import { HistoryModel } from "../../histories/history.state";
+import { Store } from "@ngxs/store";
+import { UpdateHistory } from "../../histories/history.actions";
 
 @Component({
-  selector: 'app-history-card',
-  templateUrl: './history-card.component.html',
-  styleUrls: ['./history-card.component.scss']
+  selector: "app-history-card",
+  templateUrl: "./history-card.component.html",
+  styleUrls: ["./history-card.component.scss"]
 })
 export class HistoryCardComponent implements OnInit {
-
   @Input() historyModel: HistoryModel;
   @Input() even: boolean;
   modified: boolean;
 
-  constructor(private store: Store) { }
+  constructor(private store: Store) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   saveTitle(newTitle: string) {
     if (newTitle !== this.historyModel.title) {
@@ -37,5 +36,11 @@ export class HistoryCardComponent implements OnInit {
 
   cardChanged() {
     this.modified = true;
+  }
+
+  delete() {
+    if (confirm('confirm the deletion?')) {
+      this.store.dispatch(new DeleteHistory(this.historyModel));
+    }
   }
 }
