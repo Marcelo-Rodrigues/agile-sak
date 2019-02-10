@@ -1,6 +1,24 @@
-# AgileSak
+# Agile Swiss Arm Knife
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+
+# What it is?
+
+This project is a collection of tools which can help in many stages of agile projects.
+
+## Functionalities
+
+### **Planning Tasks**
+This module helps the organization os the tasks for each history during the planning meeting
+
+
+# Development setup
+
+## This project uses [NGXS](https://ngxs.gitbook.io/ngxs/) and Yarn
+
+Run `npm install -g yarn` if you don't have yarn yet
+
+Run `yarn install` to get the dependencies
 
 ## Development server
 
