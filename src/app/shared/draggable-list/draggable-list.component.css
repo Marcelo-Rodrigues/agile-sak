@@ -1,0 +1,9 @@
+app-history-card {
+  width: 100%;
+}
+
+[cdkDragHandle] {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+}

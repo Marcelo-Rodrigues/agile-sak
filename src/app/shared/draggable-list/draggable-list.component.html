@@ -1,0 +1,15 @@
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div *ngFor="
+      let item of (listEmitter | async);
+      trackBy: trackByFn;
+      let even = even
+    "
+    cdkDrag>
+
+    <ng-container *ngTemplateOutlet="template; context: { $implicit: item }"> </ng-container>
+
+    <app-drag-handle cdkDragHandle></app-drag-handle>
+
+    <div class="drag-placeholder" *cdkDragPlaceholder></div>
+  </div>
+</div>

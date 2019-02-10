@@ -6,8 +6,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
 import { HistoryCardComponent } from './shared/history-card/history-card.component';
-import {ScrollDispatchModule} from '@angular/cdk/scrolling';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [HistoriesComponent, HistoryCardComponent],
@@ -17,8 +16,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    ScrollDispatchModule,
-    DragDropModule
+    SharedModule
   ]
 })
 export class PlanningModule { }

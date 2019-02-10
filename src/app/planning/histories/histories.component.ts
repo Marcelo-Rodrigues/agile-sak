@@ -1,3 +1,4 @@
+import { ReorderEvent } from './../../shared/draggable-list/reorder-event';
 import { AutoSaveService } from './../../shared/auto-save.service';
 import { Component, OnInit } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
@@ -20,7 +21,6 @@ export class HistoriesComponent implements OnInit {
     const me = this;
     setTimeout(() => {
       const state = me.autoSaveService.load('histories');
-      console.log(state);
       if (state) {
         me.store.dispatch(new LoadHistory(state));
       }
@@ -36,9 +36,10 @@ export class HistoriesComponent implements OnInit {
     return history.title;
   }
 
-  drop(event: CdkDragDrop<HistoriesComponent[]>) {
+  reorderItens(reorderEvent: ReorderEvent) {
+    console.log(reorderEvent);
     this.store.dispatch(
-      new ReorderHistory(event.previousIndex, event.currentIndex)
+      new ReorderHistory(reorderEvent.previousIndex, reorderEvent.newIndex)
     );
   }
 }
