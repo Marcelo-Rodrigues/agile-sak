@@ -1,13 +1,13 @@
 import { DeleteHistory } from './../../histories/history.actions';
-import { Component, OnInit, Input } from "@angular/core";
-import { HistoryModel } from "../../histories/history.state";
-import { Store } from "@ngxs/store";
-import { UpdateHistory } from "../../histories/history.actions";
+import { Component, OnInit, Input } from '@angular/core';
+import { HistoryModel } from '../../histories/history.state';
+import { Store } from '@ngxs/store';
+import { UpdateHistory } from '../../histories/history.actions';
 
 @Component({
-  selector: "app-history-card",
-  templateUrl: "./history-card.component.html",
-  styleUrls: ["./history-card.component.scss"]
+  selector: 'app-history-card',
+  templateUrl: './history-card.component.html',
+  styleUrls: ['./history-card.component.scss']
 })
 export class HistoryCardComponent implements OnInit {
   @Input() historyModel: HistoryModel;
