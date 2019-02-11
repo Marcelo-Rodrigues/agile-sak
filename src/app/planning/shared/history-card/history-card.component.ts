@@ -20,13 +20,13 @@ export class HistoryCardComponent implements OnInit {
 
   saveTitle(newTitle: string) {
     if (newTitle !== this.historyModel.title) {
-      this.updateHistory({ title: newTitle, detail: this.historyModel.detail });
+      this.updateHistory({ id: this.historyModel.id, title: newTitle, detail: this.historyModel.detail });
     }
   }
 
   saveDetail(newDetail: string) {
     if (newDetail !== this.historyModel.detail) {
-      this.updateHistory({ title: this.historyModel.title, detail: newDetail });
+      this.updateHistory({ id: this.historyModel.id, title: this.historyModel.title, detail: newDetail });
     }
   }
 

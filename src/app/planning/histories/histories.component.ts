@@ -32,7 +32,7 @@ export class HistoriesComponent implements OnInit {
   }
 
   trackByFn(history: HistoryModel) {
-    return history.title;
+    return history.id;
   }
 
   reorderItens(reorderEvent: ReorderEvent) {

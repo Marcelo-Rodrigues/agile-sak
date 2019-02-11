@@ -1,5 +1,7 @@
 import { HistoryModel } from './history.state';
 import { State, Action, StateContext } from '@ngxs/store';
+import * as uuid from 'uuid';
+
 import {
   CreateHistory,
   UpdateHistory,
@@ -9,6 +11,7 @@ import {
 } from './history.actions';
 
 export interface HistoryModel {
+  id: number;
   title: string;
   detail: string;
 }
@@ -20,7 +23,14 @@ export interface HistoryModel {
 export class HistoryState {
   @Action(CreateHistory)
   public create(ctx: StateContext<HistoryModel[]>) {
-    ctx.setState([...ctx.getState(), { title: '', detail: '' }]);
+    const currentHistories = ctx.getState();
+
+    const newItem: HistoryModel = {
+      id: this.getNextId(currentHistories),
+      title: '',
+      detail: ''
+    };
+    ctx.setState([...currentHistories, newItem]);
   }
 
   @Action(UpdateHistory)
@@ -48,7 +58,11 @@ export class HistoryState {
   public load(ctx: StateContext<HistoryModel[]>, action: LoadHistory) {
     ctx.setState(
       action.histories.map(item => {
-        return { title: item.title, detail: item.detail } as HistoryModel;
+        return {
+          id: item.id,
+          title: item.title,
+          detail: item.detail
+        } as HistoryModel;
       })
     );
   }
@@ -61,5 +75,16 @@ export class HistoryState {
       newHistories.splice(historyIndex, 1);
       ctx.setState(newHistories);
     }
+  }
+
+  private getNextId(histories: HistoryModel[]) {
+    if (!histories || !histories.length) {
+      return 1;
+    }
+    return (
+      histories
+        .map(history => history.id)
+        .reduce((prevId, currentId) => Math.max(prevId, currentId)) + 1
+    );
   }
 }
