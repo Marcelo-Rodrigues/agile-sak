@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { environment } from 'src/environments/environment';
 
 import { PlanningModule } from './planning/planning.module';
-import { HistoryState } from './planning/histories/history.state';
+import { HistoryState } from './planning/history/history.state';
 import { SharedModule } from './shared/shared.module';
 
 import { LOCALE_ID, NgModule } from '@angular/core';

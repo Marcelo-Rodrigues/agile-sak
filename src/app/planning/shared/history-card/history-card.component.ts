@@ -1,8 +1,8 @@
-import { DeleteHistory } from './../../histories/history.actions';
+import { DeleteHistory } from './../../history/history.actions';
 import { Component, OnInit, Input } from '@angular/core';
-import { HistoryModel } from '../../histories/history.state';
+import { HistoryModel } from '../../history/history.state';
 import { Store } from '@ngxs/store';
-import { UpdateHistory } from '../../histories/history.actions';
+import { UpdateHistory } from '../../history/history.actions';
 
 @Component({
   selector: 'app-history-card',

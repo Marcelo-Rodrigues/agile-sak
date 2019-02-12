@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HistoriesComponent } from './histories/histories.component';
+import { HistoryComponent } from './history/history.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -9,9 +9,10 @@ import { HistoryCardComponent } from './shared/history-card/history-card.compone
 import { SharedModule } from '../shared/shared.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
-  declarations: [HistoriesComponent, HistoryCardComponent],
+  declarations: [HistoryComponent, HistoryCardComponent, TaskComponent],
   imports: [
     CommonModule,
     MatButtonModule,

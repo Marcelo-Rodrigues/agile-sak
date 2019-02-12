@@ -1,0 +1,10 @@
+<ng-container *ngIf="currentHistory">
+    <h1><label i18n="task management|Task management title label@@planningTaskManagementLabel">History</label>
+      {{currentHistory.title}} -  <label i18n="task management|Task management title label@@planningTaskManagementLabel">Task Management</label></h1>
+
+  <button mat-raised-button color="primary" (click)="addTask()" i18n="new task|New task button label@@planningNewTaskButtonLabel">
+    New Task
+  </button>
+
+</ng-container>
+

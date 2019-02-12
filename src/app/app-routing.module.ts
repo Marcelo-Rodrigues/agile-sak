@@ -1,7 +1,8 @@
+import { TaskComponent } from './planning/task/task.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { HistoriesComponent } from './planning/histories/histories.component';
+import { HistoryComponent } from './planning/history/history.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,15 @@ const routes: Routes = [
   },
   {
     path: 'planning/histories',
-    component: HistoriesComponent
+    component: HistoryComponent
+  },
+  {
+    path: 'planning/histories/:historyId',
+    redirectTo: 'planning/histories/:historyId/tasks'
+  },
+  {
+    path: 'planning/histories/:historyId/tasks',
+    component: TaskComponent
   }
 ];
 
